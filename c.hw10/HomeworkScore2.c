@@ -105,6 +105,28 @@ int main()
 
     }
 
+    for(i = 0; i < StuNum - 1; i++)
+    {
+
+        for(j = 0; j < (StuNum - i - 1); j++)
+        {
+
+            if((ans[j][0] > ans[j + 1][0]) && (ans[j][1] == ans[j + 1][1]))
+            {
+
+                temp0 = ans[j][0];
+                temp1 = ans[j][1];
+                ans[j][0] = ans[j + 1][0];
+                ans[j][1] = ans[j + 1][1];
+                ans[j + 1][0] = temp0;
+                ans[j + 1][1] = temp1;
+
+            }
+
+        }
+
+    }
+
     printf("No.\tScore\n");
 
     for(i = 0; i < StuNum; i++)
