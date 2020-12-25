@@ -15,7 +15,7 @@ int main()
 
         p = rand() % (10 - i);
         answer[i] = box[p];
-        box[p] = box[10-i];
+        box[p] = box[9-i];
 
     }
 
