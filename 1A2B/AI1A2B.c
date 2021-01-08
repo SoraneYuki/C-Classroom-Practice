@@ -10,34 +10,32 @@ int guess[4];
 
 int A = 0, B = 0, solsize = 0;
 
-void printHeader()
-{
+// void printHeader()
+// {
 
-    printf("+---------------+\n");
-    printf("|   1A2B Game   |\n");
-    printf("+---------------+\n");
+//     printf("+---------------+\n");
+//     printf("|   1A2B Game   |\n");
+//     printf("+---------------+\n");
 
-}
+// }
 
-void generateAnswer()
-{
+// void generateAnswer()
+// {
 
-    int i, p;
+//     int i, p;
+//     int box[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+//     srand((unsigned int)&p);
 
-    int box[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
+//     for(i = 0; i < 4; i++)
+//     {
 
-    srand((unsigned int)&p);
+//         p = rand() % (10 - i);
+//         answer[i] = box[p];
+//         box[p] = box[9 - i];
 
-    for(i = 0; i < 4; i++)
-    {
+//     }
 
-        p = rand() % (10 - i);
-        answer[i] = box[p];
-        box[p] = box[9 - i];
-
-    }
-
-}
+// }
 
 void printAnswer()
 {
@@ -50,9 +48,7 @@ void getUserGuess()
 {
 
     int i;
-
     char temp[4];
-
     scanf(" %c%c%c%c", &temp[0], &temp[1], &temp[2], &temp[3]);
 
     for(i = 0; i < 4; i++)
@@ -184,7 +180,6 @@ void reduceSolSpace(int p)
 {
 
     int i, a, b, x, y, size = 0;
-
     int temp[5040][4];
 
     for(i = 0; i < solsize; i++)
@@ -257,24 +252,17 @@ int main()
 {
 
     int p, cnt = 1;
-
     boolean quit = false;
-
     srand((unsigned int) &p);
-
     generateSolSpace();
 
     while(!quit)
     {
 
         p = rand()%solsize;
-
         printf("(#%d)", cnt);
-
         printAGuess(p);
-
         printf("--->?");
-
         scanf("%dA%dB", &A, &B);
 
         if(A == 4)
