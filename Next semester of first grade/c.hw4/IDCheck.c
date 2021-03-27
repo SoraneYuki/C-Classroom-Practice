@@ -19,6 +19,8 @@ int main()
 
     one = L - 55;
 
+    //Use if else were be better
+
     switch(one)
     {
 
