@@ -3,7 +3,14 @@
 Contact getAContact()
 {
 
+    Contact con;
 
+    printf("Name: ");
+    scanf("%s %s", con.name.firstname, con.name.lastname);
+
+    
+
+    return con;
 
 }
 
