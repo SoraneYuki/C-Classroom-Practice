@@ -208,7 +208,7 @@ void DeleteProduct(Product products[], int id, int i)
   {
     products[j]=products[j+1];
   }
-  products[i]=temp;
+  products[i-1]=temp;
 }
 
 int main()
