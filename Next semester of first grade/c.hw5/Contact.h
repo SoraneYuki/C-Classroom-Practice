@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 
-#define numContact 10
+#define numContact 2
 
 typedef enum {Male, Female} Gender;
 
