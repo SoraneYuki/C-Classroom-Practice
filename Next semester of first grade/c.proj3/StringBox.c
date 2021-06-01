@@ -16,7 +16,7 @@ void start()
     for(i = 0; i < Row; i++)
     {
 
-        str[i] = malloc(2);
+        str[i] = malloc(80);
 
     }
 
@@ -35,7 +35,7 @@ void checksize()
         for(i = nowsize; i < (nowsize * 2); i++)
         {
 
-            str[i] = malloc(2);
+            str[i] = malloc(80);
 
         }
 
@@ -64,11 +64,11 @@ int readALine(char strr[], int n)
         if (!((i == 0) && (ch == ' ')))
         {
             
-            // if((i + 1) >= size)
+            // if(i >= (size - 1))
             // {
 
-            //     //strr = realloc(strr, (size + 1));
-            //     size++;
+            //     str[count] = realloc(str[count], (size + 2));
+            //     size = size + 2;
 
             // }
             
@@ -77,7 +77,7 @@ int readALine(char strr[], int n)
         }
     }
     strr[i] = '\0';
-    str = realloc(str, sizeof(char *) * i + 1);
+    str[count - 1] = realloc(str[count - 1], i * sizeof(char));
     return i;
 }
 
